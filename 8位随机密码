@@ -1,7 +1,11 @@
+[root@svr5 ~]# vim rand.sh
 #!/bin/bash
-Str="abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
-9"
-pass=""
+x=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+pass=''
 for i in {1..8}
 do
-num=$[RANDOM%${#Str}]
+num=$[RANDOM%62]
+tmp=${x:num:1}
+pass=${pass}$tmp
+done
+echo $pass
