@@ -1,0 +1,7 @@
+#!/bin/bash
+Str="abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678
+9"
+pass=""
+for i in {1..8}
+do
+num=$[RANDOM%${#Str}]
